@@ -15,10 +15,14 @@
       width: 100%;
       height: auto;
       background: #151527;
-      border: 1px solid rgba(96,1,255,.4);
+      border: 1px solid rgba(96, 1, 255, 0.4);
       border-radius: 10px;
-      &:hover{
-        background: linear-gradient(153.51deg,#151527 70.81%,rgba(96,1,255,.5) 133.08%);
+      &:hover {
+        background: linear-gradient(
+          153.51deg,
+          #151527 70.81%,
+          rgba(96, 1, 255, 0.5) 133.08%
+        );
         border: 1px solid #6001ff;
       }
       .img {
@@ -28,7 +32,7 @@
           width: 100%;
           border-radius: 10px 10px 0 0;
         }
-        .increase{
+        .increase {
           position: absolute;
           top: 20px;
           right: 0;
@@ -39,24 +43,24 @@
           color: #000;
           line-height: 20px;
           border-radius: 10px 0 0 10px;
-
         }
       }
-      .info{
+      .info {
         padding: 16px;
-        .name{
+        .name {
           font-size: 16px;
           font-weight: 700;
         }
-        .desc{
+        .desc {
           font-size: 12px;
           line-height: 16px;
-          padding: 10px 0 ;
+          padding: 10px 0;
         }
-        .marketcap{
+        .marketcap {
           margin-top: 20px;
-          .price{
+          .price {
             font-size: 14px;
+            word-wrap: break-word;
           }
         }
       }
@@ -67,5 +71,19 @@
     flex-direction: column;
     background-clip: padding-box;
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    .list {
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
+    }
+    .list_column {
+      width: 48% !important;
+      gap: 10px;
+    }
   }
 }
