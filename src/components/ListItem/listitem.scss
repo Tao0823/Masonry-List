@@ -1,0 +1,54 @@
+.list_item {
+  width: 100%;
+  height: auto;
+  background: #151527;
+  border: 1px solid rgba(96, 1, 255, 0.4);
+  border-radius: 10px;
+  &:hover {
+    background: linear-gradient(
+      153.51deg,
+      #151527 70.81%,
+      rgba(96, 1, 255, 0.5) 133.08%
+    );
+    border: 1px solid #6001ff;
+  }
+  .img {
+    width: 100%;
+    position: relative;
+    > img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .increase {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      background: #35fffe;
+      padding: 0 10px;
+      height: 20px;
+      font-size: 14px;
+      color: #000;
+      line-height: 20px;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+  .info {
+    padding: 16px;
+    .name {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .desc {
+      font-size: 12px;
+      line-height: 16px;
+      padding: 10px 0;
+    }
+    .marketcap {
+      margin-top: 20px;
+      .price {
+        font-size: 14px;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
