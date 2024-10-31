@@ -3,10 +3,10 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 150px;
 
   .swap_container {
     width: 480px;
+    padding-top: 150px;
     .card {
       padding: 16px;
       border: 1px solid rgba(34, 34, 34, 0.05);

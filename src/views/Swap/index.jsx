@@ -15,40 +15,14 @@ const Swap = (props) => {
   // 显示或隐藏更多信息
   const [showMore, setShowMore] = useState(false);
 
-  // 币种种类
-  const [currency, setCurrency] = useState([
-    {
-      token: "Polygon POL",
-      icon: "https://picsum.photos/50/50",
-      name: "POL",
-      symbol: "USDT",
-      orders: "",
-      chain: 55,
-      slippage: "",
-    },
-    {
-      token: "Tether USD",
-      icon: "https://picsum.photos/50/50",
-      name: "USDT",
-      symbol: "USDT",
-      orders: "",
-      chain: 54,
-      slippage: "",
-    },
-    {
-      token: "Decentraland MANA",
-      icon: "https://picsum.photos/50/50",
-      name: "MANA",
-      symbol: "USDT",
-      orders: "",
-      chain: 58,
-      slippage: "",
-    },
-  ]);
+  // 币种种类列表
+  const [currency, setCurrency] = useState([]);
   // 售卖选中的币种
   const [sellToken, setSellToken] = useState({});
+  // 购买选中的币种
+  const [buyToken, setBuyToken] = useState({});
 
-  // 出售的金额
+  // 出售的信息
   const [sellAmount, setSellAmount] = useState("");
   const sellChange = ({ target: { value } }) => {
     setSellAmount(value);
@@ -78,7 +52,21 @@ const Swap = (props) => {
     );
   };
 
-  useEffect(() => {}, []);
+  // 请求token列表
+  const requestTokenList = async () => {
+    const res = await (
+      await fetch(
+        "http://0xtest2024apps001olunoshibdegenbitethusdtc0xogs891.wedegen.com/v2api/x20/swapTokenList"
+      )
+    ).json();
+    console.log("请求token列表", res);
+    if (res.code === 200 && res.data) {
+      setCurrency(res.data);
+    }
+  };
+  useEffect(() => {
+    requestTokenList();
+  }, []);
   return (
     <div className="swap">
       <div className="swap_container">
@@ -139,7 +127,14 @@ const Swap = (props) => {
                 onChange={sellChange}
               />
             </div>
-            <div className="value_curr">asas</div>
+            <div className="value_curr">
+              {" "}
+              <TokenSelection
+                tokenList={currency}
+                acToken={buyToken}
+                setAcToken={setBuyToken}
+              />
+            </div>
           </div>
           <div className="money_curr">$0</div>
         </div>
