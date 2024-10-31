@@ -1,0 +1,27 @@
+.token_selection {
+  .show_token {
+    display: flex;
+    align-items: center;
+    color: rgb(34, 34, 34);
+  }
+  .show_token_no_data {
+    padding: 0 12px;
+    background: rgb(252, 114, 255);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    &:hover {
+      background: rgb(253, 60, 254);
+    }
+    &:focus,
+    &:active {
+      transform: scale(0.98);
+      opacity: 0.75;
+    }
+  }
+  .arrow_icon {
+    width: 26px;
+    height: 26px;
+    transform: rotate(270deg);
+  }
+}
