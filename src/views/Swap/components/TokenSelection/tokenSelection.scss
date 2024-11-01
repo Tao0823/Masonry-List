@@ -7,6 +7,7 @@
     border: 1px solid rgb(242, 242, 242);
     padding: 0 12px 0 5px;
     border-radius: 18px;
+    background: #fff;
     .selected_token {
       display: flex;
       align-items: center;
@@ -87,6 +88,14 @@
 
   .token_list {
     margin-top: 10px;
+    max-height: 408px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 16px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #f4f4f4;
+    }
     .list_item {
       height: 68px;
       display: flex;
@@ -94,6 +103,7 @@
       padding: 16px;
       &:hover {
         background: #f9f9f9;
+        cursor: pointer;
       }
       .item_icon {
         width: 40px;

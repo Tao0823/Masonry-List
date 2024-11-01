@@ -10,12 +10,18 @@ import search from "@/assets/swap/search.svg";
 
 import "./tokenSelection.scss";
 
-const TokenSelection = ({ tokenList, acToken, setAcToken }) => {
+const TokenSelection = ({ tokenList, acToken, setAcToken, selectedToken }) => {
+  // 去除已经选择过的token
+  const tokenListWithoutSelected = () => {
+    const arr = tokenList.filter((item) => item.token !== selectedToken.token);
+    return arr;
+  };
+
   const isActoken = Object.keys(acToken).length === 0;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [list, setList] = useState(tokenList);
+  const [list, setList] = useState(tokenListWithoutSelected);
   // 搜索内容
   const [searchValue, setSearchValue] = useState("");
   const searchChange = ({ target: { value } }) => {
@@ -43,8 +49,9 @@ const TokenSelection = ({ tokenList, acToken, setAcToken }) => {
     setList(arr);
   }, [debouncedSearchValue]);
   useEffect(() => {
-    setList(tokenList);
-  }, [tokenList]);
+    const newList = tokenListWithoutSelected();
+    setList(newList);
+  }, [tokenList, selectedToken]);
   return (
     <div className="token_selection">
       <div
