@@ -102,3 +102,14 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .swapfixedcoin {
+    padding: 0 10px;
+    padding-top: 100px;
+    .swapfixedcoin_box {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+}
