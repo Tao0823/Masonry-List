@@ -470,3 +470,138 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .swap {
+    background: #222;
+    padding: 0 10px;
+
+    .swap_container {
+      max-width: 480px;
+
+      .card {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgb(66, 64, 64);
+        &:hover {
+          border-color: rgba(34, 34, 34, 0.09);
+          cursor: pointer;
+        }
+        .name {
+          color: #fff;
+        }
+        .value {
+          .value_num {
+            .input_num {
+              color: #fff;
+            }
+          }
+        }
+        .money_curr {
+          color: #fff;
+        }
+      }
+      .card_selected {
+        background-color: transparent;
+      }
+      .card_sell {
+        margin-bottom: 2px;
+      }
+      .card_buy {
+        margin-top: 4px;
+      }
+      .exchange {
+        .exchange_box {
+          background: rgb(66, 64, 64);
+          .exchange_icon {
+            color: #fff !important;
+          }
+          &:hover {
+            background: rgb(66, 64, 64);
+            cursor: pointer;
+          }
+        }
+      }
+
+      .more_info {
+        .info_item {
+          color: #fff;
+
+          .info_value {
+            .info_value_auto {
+              height: 20px;
+              padding: 0px 4px;
+              background: rgb(66, 64, 64);
+              color: #fff;
+            }
+            .info_value_text {
+              color: #d4d3d3;
+            }
+          }
+        }
+      }
+    }
+  }
+  .setup_tip {
+    max-width: 320px !important;
+    .ant-tooltip-inner {
+      background: #222;
+      color: #fff;
+      .set_tip {
+        .set_tip_item {
+          .item_value {
+            height: 34px;
+            padding: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #d4d3d3;
+
+            .auto {
+              background-color: rgb(66, 64, 64);
+              color: #fc72ff;
+            }
+            .set_tip_input {
+              background: transparent;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .confim_modal {
+    max-width: 420px !important;
+    width: 100% !important;
+    padding: 0 10px;
+    .ant-modal-content {
+      background: #222;
+    }
+    .header {
+      color: #fff;
+    }
+    .token_item {
+      .item_info {
+        .num {
+          color: #fff;
+        }
+        .price {
+          color: #fff;
+        }
+      }
+    }
+
+    .confim_info {
+      .confim_info_item {
+        color: #fff;
+        span {
+          &:last-child {
+            color: #d4d3d3;
+          }
+        }
+        .slippage {
+          .auto {
+            background-color: rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
