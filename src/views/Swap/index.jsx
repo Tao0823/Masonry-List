@@ -71,7 +71,7 @@ const Swap = (props) => {
   };
 
   // 按钮状态 0 链接钱包 , 1无法兑换，未输入数字，2可以兑换
-  const [btnStatus, setBtnStatus] = useState(2);
+  const [btnStatus, setBtnStatus] = useState(0);
 
   //更多信息
   const [moreInfo, setMoreInfo] = useState({
