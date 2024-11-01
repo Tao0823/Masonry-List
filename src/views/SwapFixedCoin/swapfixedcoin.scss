@@ -1,0 +1,104 @@
+.swapfixedcoin {
+  min-height: 100vh;
+  background: #1b1d27;
+  padding-top: 150px;
+  .swapfixedcoin_box {
+    width: 500px;
+    margin: 0 auto;
+    background: #2e3039;
+    border-radius: 10px;
+    padding: 15px;
+    .swap_tab {
+      display: flex;
+      gap: 10px;
+      .btn {
+        flex: 1;
+        background: #212936;
+        border-radius: 5px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: #878d99;
+        cursor: pointer;
+      }
+      .btn_active {
+        background: #77db89;
+        color: #20292c;
+      }
+    }
+    .explain {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      div {
+        padding: 5px 10px;
+        background: #1b1d27;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #878d99;
+      }
+    }
+    .input_box {
+      margin-top: 15px;
+
+      .input_info {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #878d99;
+        border-radius: 5px;
+
+        .input {
+          flex: 1;
+          height: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: #878d99;
+          font-size: 16px;
+          padding: 0 10px;
+
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+        .symbol {
+          font-size: 16px;
+          color: #e8f0e9;
+          margin-right: 10px;
+        }
+        .icon {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          border: 1px solid #878d99;
+        }
+      }
+      .input_default {
+        margin-top: 10px;
+        display: flex;
+        gap: 3px;
+        > div {
+          padding: 5px 10px;
+          background: #1b1d27;
+          border-radius: 5px;
+          font-size: 14px;
+          color: #878d99;
+          cursor: pointer;
+        }
+      }
+    }
+    .swap_btn {
+      width: 100%;
+      height: 40px;
+      margin-top: 20px;
+      background: #77db89;
+      border-radius: 5px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
